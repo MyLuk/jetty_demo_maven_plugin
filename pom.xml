@@ -17,6 +17,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+    <jetty.version>9.4.14.v20181114</jetty.version>
   </properties>
 
   <dependencies>
@@ -39,14 +40,14 @@
   </dependencies>
 
   <build>
-    <finalName>SimpleMavenWebApp</finalName>
+    <finalName>${artifactId}</finalName>
     <plugins>
 
       <!-- http://mvnrepository.com/artifact/org.eclipse.jetty/jetty-maven-plugin -->
       <plugin>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
-        <version>9.4.14.v20181114</version>
+        <version>${jetty.version}</version>
 
         <configuration>
           <scanIntervalSeconds>10</scanIntervalSeconds>
